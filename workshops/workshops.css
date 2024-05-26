@@ -1,0 +1,152 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+/*===== BASE =====*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding-top:2rem;
+}
+.container .home{
+    position:fixed;
+    top:1.5rem;
+    left:2rem;
+    cursor:pointer;
+    color:#000;
+    z-index:100;
+    transition:all 0.5s ease;
+}
+.container #homeIcon {
+    position:fixed;
+    top:1rem;
+    left:.5rem;
+    color:#000;
+    cursor:pointer;
+    display:none;
+    z-index:100;
+    font-size:1.5rem;
+    transition:all 0.5s ease;
+}
+.container .home h3{
+    transition:all 0.5s ease;
+}
+.container .home h3:hover,.container #homeIcon:hover{
+    color:dodgerblue;
+}
+
+.container .merge{
+    padding:2rem 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.container .merge h1{
+    padding:0 1.5rem 1rem 0;
+    margin:0 2rem;
+}
+.container .merge h2{
+    font-size:1.8rem;
+}
+.container .merge img{
+    width:600px;
+    height:500px;
+    margin:auto;
+    display:block;
+    transition:all 0.5s;
+}
+.container .merge a{
+    transition:all 0.5s;
+}
+.container .merge a:hover{
+    transform:scale(1.05);
+}
+.section-title {
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+}
+.section-title::after {
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+@media screen and (max-width:700px){
+    .container .merge img{
+        width:400px;
+        height:auto;
+    }
+.container .merge h1{
+    font-size:1.2rem;
+    margin:0 1rem;
+    padding-bottom:1rem;
+}
+.container .home{
+    display:none;
+}
+.container #homeIcon{
+    display:block;
+}
+
+}
+@media screen and (max-width:500px){
+    .container .merge img{
+        width:300px;
+        height:auto;
+    }
+.container .merge h1{
+    font-size:1.2rem;
+    margin:0 1rem;
+    padding-bottom:1rem;
+}
+.container .home{
+    display:none;
+}
+.container #homeIcon{
+    display:block;
+}
+
+}
